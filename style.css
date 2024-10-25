@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono' , sans-serif;
+}
+:root{
+    --strong-cyan:hsl(172, 67%, 45%);
+    --Very-dark-cyan:hsl(183, 100%, 15%);
+    --Dark-grayish-cyan:hsl(186, 14%, 43%);
+    --Grayish-cyan:hsl(184, 14%, 56%);
+    --Light-grayish-cyan:hsl(185, 41%, 84%);
+    --Very-Light-grayish-cyan:hsl(189, 41%, 97%);
+    --White:hsl(0, 0%, 100%);
+}
+body{
+    background: var(--Light-grayish-cyan);
+
+
+}
+.container{
+    margin: 5% auto;
+    width: 60%;
+    text-align: center;
+}
+.section-wrapper{
+    text-align: left;
+    margin-top: 2rem;
+    background: var(--White);
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+.left-wrapper,.right-wrapper{
+    width: 50%;
+}
+
+input{
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 0.3rem;
+    background-color: var(--Very-Light-grayish-cyan);
+    border: none;
+    outline: none;
+    font-size: 24px;
+    text-align: right;
+    color: var(--strong-cyan);
+    font-weight: 700;
+    cursor: pointer;
+    
+}
+input.invalid{
+    border: 1px solid red;
+}
+
+input::placeholder{
+    color: var(--Light-grayish-cyan);
+}
+input:hover,input:focus{
+    border: 1px solid var(--Very-dark-cyan);
+}
+label{
+    color: var(--Very-dark-cyan);
+    font-weight: 700;
+}
+.bill{
+    position: relative;
+}
+.bill-icon{
+    position: absolute;
+    top: 3.2rem;
+    left: 1rem;
+
+}
+.select-btn{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0.5rem 0;
+}
+button{
+    width: 30%;
+    padding: 0.5rem;
+    background: var(--Very-dark-cyan);
+    color: var(--White);
+    border: none;
+    outline: none;
+    border-radius: 0.3rem;
+    height: fit-content;
+    font-size: 24px;
+    cursor: pointer;
+}
+button:hover{
+    background: var(--strong-cyan);
+    color: black;
+}
+button.selected{
+    background: var(--strong-cyan);
+    color: black;
+}
+.select-btn input{
+    width: 30%;
+    margin-top: 0;
+}
+.right-wrapper{
+    background: var(--Very-dark-cyan);
+    padding: 1.5rem;
+    border-radius: 1rem;
+
+}
+.tip{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+.tip-title p{
+    color: var(--White);
+}
+.tip-title span{
+    color: var(--Very-Light-grayish-cyan);
+}
+.tip h1{
+    color: var(--strong-cyan);
+    font-size: 2.5rem;
+}
+.submit{
+    margin-top: 30%;
+    background: var(--Grayish-cyan);
+    width: 100%;
+    color: var(--Light-grayish-cyan);
+}
+.bill-state{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.error{
+    color: red;
+    font-weight: bold;
+    font-size: 0.9rem;
+
+}
+@media (max-width: 420px) {
+    .error{
+        font-size: 0.6rem;
+       /* font-weight:100; */
+
+        
+        
+    }
+    label{
+        font-size: 0.8rem;
+
+        
+        
+    }
+
+
+}
+@media (max-width:600px) {
+    .container{
+        width: 100%;
+        margin-bottom: 0;
+        
+        
+        
+    }
+    input{
+        /* position: relative; */
+        align-items: center;
+    }
+    #ab::placeholder{
+        text-align: center;
+    }
+
+    
+
+    
+    .section-wrapper{
+        flex-direction: column;
+        border-radius: 1rem 1rem 0 0;
+    }
+    .left-wrapper,.right-wrapper{
+        width: 100%;
+    }
+    button{
+        width: 45%;
+    }
+    .select-btn input{
+        width: 45%;
+    }
+    .tip h1{
+        font-size: 1.5rem;
+
+    }
+    .submit{
+        margin-top: 10%;
+        /* margin: 0.5rem; */
+    }
+}
+
+@media (min-width:600px) and (max-width:1075px){
+    .container{
+        width: 100%;
+      
+        
+        
+        
+    }
+    button{
+        width: 40%;
+    }
+    .select-btn input{
+        width: 40%;
+    }
+    input{
+        /* position: relative; */
+        align-items: center;
+    }
+    #ab::placeholder{
+        text-align: center;
+    }
+    .tip h1{
+        font-size: 1.5rem;
+        
+
+    }
+    .tip-title{
+        margin-bottom: 10%;
+
+    }
+    .submit{
+        margin-top: 50%;
+        /* margin: 0.5rem; */
+    }
+
+    
+    .error{
+        font-size: 0.7rem;
+       /* font-weight:100; */
+
+        
+        
+    }
+    label{
+        font-size: 0.9rem;
+
+        
+        
+    }
+
+}
